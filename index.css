@@ -1,0 +1,83 @@
+*{
+    margin: 0 ;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #001d30;
+    animation: change_bg 5s linear infinite;
+    position: relative;
+    overflow: hidden;
+}
+.loading{
+    width: 10px;
+    height: 10px;
+    background-color: #51eeee;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    box-shadow: 0 0 5px #51eeee,0 0 25px #51eeee,0 0 50px #51ee;
+    animation: hovs 3s linear infinite; 
+    transform: rotate(-30deg);
+}
+@keyframes hovs {
+
+    100%{
+        right: 150%;
+        top:60%;
+    }
+}
+.loading::after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background:linear-gradient(to right,#51eeee,transparent);
+    top: 2.5px;
+    right: -100px;
+}
+.img{
+    bottom: -70px;
+    right: 45%;
+    position: absolute;
+    width: 200px;
+}
+.moon{
+    width: 100px;
+    height: 100px;
+    background-color: #51eeee;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #51eeee,0 0 25px #001d30,0 0 50px #001d30,0 0 75px #001d30;
+    top: 50px;
+    position: absolute;
+    right: 100px;
+    opacity: 0.5;
+    transform: rotate(15deg);
+}
+@keyframes diy {
+    to{
+        opacity: 1;
+    }
+}
+.moon::before{
+    content: '';
+    display: block;
+    background-color: #001d30;
+    position: absolute;
+    left: -20px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 16px;
+    opacity: 0.2;
+}
